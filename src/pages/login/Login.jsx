@@ -26,13 +26,25 @@ function Login() {
               <label className="lab" htmlFor="email">
                 Email
               </label>
-              <input className="inp-login" type="email" id="email" />
+              <input
+                className="inp-login"
+                type="email"
+                id="email"
+                name="email"
+                required
+              />
             </div>
             <div className="login-lab">
               <label className="lab" htmlFor="password">
                 Password
               </label>
-              <input className="inp-login" type="password" id="password" />
+              <input
+                className="inp-login"
+                type="password"
+                id="password"
+                name="password"
+                required
+              />
             </div>
           </div>
           <button className="login-btn" disabled={isPending}>

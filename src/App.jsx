@@ -6,6 +6,8 @@ import {
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import MainLayout from "./layout/MainLayout";
 import { useSelector } from "react-redux";
+import { useAuthContext } from "./hooks/useAuthContext";
+
 import {
   Budgets,
   Login,
@@ -17,7 +19,14 @@ import {
 } from "./pages/index";
 
 function App() {
-  const { user } = useSelector((store) => store.user);
+  useAuthContext();
+
+  const { user, isAuthReady } = useSelector((store) => store.user);
+
+  if (!isAuthReady) {
+    return <p>Yuklanmoqda...</p>;
+  }
+
   const routes = createBrowserRouter([
     {
       path: "/",
@@ -27,26 +36,11 @@ function App() {
         </ProtectedRoutes>
       ),
       children: [
-        {
-          index: true,
-          element: <Overview />,
-        },
-        {
-          path: "/budgets",
-          element: <Budgets />,
-        },
-        {
-          path: "/pots",
-          element: <Pots />,
-        },
-        {
-          path: "/recurringBills",
-          element: <RecurringBils />,
-        },
-        {
-          path: "/transactions",
-          element: <Transactions />,
-        },
+        { index: true, element: <Overview /> },
+        { path: "/budgets", element: <Budgets /> },
+        { path: "/pots", element: <Pots /> },
+        { path: "/recurringBills", element: <RecurringBils /> },
+        { path: "/transactions", element: <Transactions /> },
       ],
     },
     {
@@ -58,6 +52,7 @@ function App() {
       element: user ? <Navigate to="/" /> : <Signup />,
     },
   ]);
+
   return <RouterProvider router={routes} />;
 }
 
