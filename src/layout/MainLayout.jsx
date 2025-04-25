@@ -3,12 +3,12 @@ import Sidebar from "../components/sidebar/Sidebar";
 
 function MainLayout() {
   return (
-    <>
+    <div className="layout">
       <Sidebar />
       <main>
         <Outlet />
       </main>
-    </>
+    </div>
   );
 }
 

@@ -1,0 +1,244 @@
+.Transactions-container {
+  padding: 40px 40px 32px 40px;
+}
+
+.transactions-title {
+  font-family: Public Sans;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  color: #201f24;
+  margin-bottom: 42px;
+}
+
+.transactions-menu {
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.transactions-menu-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.transactions-inp {
+  width: 320px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--color-beige-500, #98908b);
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    cursor: text;
+  }
+}
+
+.transactions-inp:focus {
+  border: 1px solid var(--color-beige-500, #98908b);
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.transactions-navmenu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.transactions-select {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.tran-text {
+  font-family: Public Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #696868;
+}
+
+.select {
+  border-radius: 8px;
+  padding: 12px 40px 12px 20px;
+  font-family: Public Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #201f24;
+  border: 1px solid var(--color-beige-500, #98908b);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("./icon-caret-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+  cursor: pointer;
+}
+
+.select-inp:focus {
+  border: 1px solid var(--color-beige-500, #98908b);
+}
+
+.nav-transaction {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 16px;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-grey-100, #f2f2f2);
+}
+
+.nav-text {
+  font-family: Public Sans;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #696868;
+}
+
+.nav-text-end {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.index {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.transactions-information {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--color-grey-100, #f2f2f2);
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-block img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.ava-title {
+  font-family: Public Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  color: #201f24;
+}
+
+.category-date {
+  font-family: Public Sans;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #696868;
+}
+
+.amount-block {
+  justify-content: flex-end;
+}
+
+.amount {
+  font-family: Public Sans;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: right;
+  color: #277c78;
+}
+
+.front-back {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.prev-next {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border: 1px solid var(--color-beige-500, #98908b);
+  background-color: #ffffff;
+  border-radius: 8px;
+  font-family: Public Sans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  color: #201f24;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #98908b;
+    color: #ffffff;
+  }
+}
+
+.num-page-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+.num-page {
+  font-family: Public Sans;
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  border: 1px solid var(--color-beige-500, #98908b);
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #98908b;
+  }
+
+  &.active {
+    background-color: #201f24;
+    color: #ffffff;
+    border: 1px solid var(--color-beige-500, #98908b);
+  }
+}

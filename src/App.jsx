@@ -7,7 +7,6 @@ import ProtectedRoutes from "./components/ProtectedRoutes";
 import MainLayout from "./layout/MainLayout";
 import { useSelector } from "react-redux";
 import { useAuthContext } from "./hooks/useAuthContext";
-
 import {
   Budgets,
   Login,
@@ -21,11 +20,7 @@ import {
 function App() {
   useAuthContext();
 
-  const { user, isAuthReady } = useSelector((store) => store.user);
-
-  if (!isAuthReady) {
-    return <p>Yuklanmoqda...</p>;
-  }
+  const { user } = useSelector((store) => store.user);
 
   const routes = createBrowserRouter([
     {
