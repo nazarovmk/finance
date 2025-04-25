@@ -12,10 +12,14 @@ function Overview() {
       <div>
         <Current />
         <div className="overview-cards-grid">
-          <Pots />
-          <Budgets />
-          <Transactions />
-          <RecurringBills />
+          <div className="over-two-card">
+            <Pots />
+            <Transactions />
+          </div>
+          <div className="over-two-card">
+            <Budgets />
+            <RecurringBills />
+          </div>
         </div>
       </div>
     </section>

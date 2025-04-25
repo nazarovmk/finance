@@ -79,6 +79,12 @@
   }
 }
 
+.over-two-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .nav-title {
   display: flex;
   align-items: center;
