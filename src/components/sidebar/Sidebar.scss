@@ -9,6 +9,16 @@
   border-bottom-right-radius: 15px;
   position: sticky;
   top: 0;
+  width: 300px;
+  transition: width 0.3s ease;
+}
+
+.Sidebar-container.toggle-bar {
+  width: 88px;
+
+  .items {
+    padding: 17px 40px 17px 32px;
+  }
 }
 
 .logo-wrap {
@@ -22,6 +32,12 @@
   height: 22px;
 }
 
+.sidebar-logo-small {
+  width: 13px;
+  height: 22px;
+  margin-bottom: 64px;
+}
+
 .item-wrap {
   display: flex;
   flex-direction: column;
@@ -33,7 +49,7 @@
   align-items: center;
   gap: 16px;
   padding: 17px 80px 17px 32px;
-  transition: background-color 0.2s ease;
+  transition: 0.1s ease;
   cursor: pointer;
 
   img {
@@ -56,6 +72,7 @@
     background-color: #f8f4f0;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+    border-left: 4px solid #277c78;
 
     p {
       color: #201f24;
@@ -80,6 +97,5 @@
 }
 
 .side-logout {
-  padding-top: 20px;
   margin-top: auto;
 }

@@ -5,10 +5,9 @@ import { useCollectionsData } from "../../hooks/useCollectionsData";
 function Budgets() {
   const { data } = useCollectionsData();
 
-  if (!data || !Array.isArray(data.balance)) {
-    return;
+  if (!data || !Array.isArray(data.transactions)) {
+    return null;
   }
-
   return (
     <div className="card">
       <span className="nav-title">

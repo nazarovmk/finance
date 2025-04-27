@@ -238,3 +238,45 @@
 .apexchart {
   padding-top: 51px;
 }
+
+.bill-summary {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paid-bills {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 16px 20px 16px;
+  background-color: #f8f4f0;
+  border-left: 4px solid var(--color-green, #277c78);
+  border-radius: 8px;
+
+  .span {
+    font-family: Public Sans;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: #696868;
+  }
+
+  span {
+    font-family: Public Sans;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0px;
+    color: #201f24;
+  }
+}
+
+.paid-bills:nth-child(2) {
+  border-left: 4px solid var(--color-yellow, #f2cdac);
+}
+
+.paid-bills:nth-child(3) {
+  border-left: 4px solid var(--color-cyan, #82c9d7);
+}
